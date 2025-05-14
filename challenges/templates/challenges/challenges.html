@@ -6,7 +6,12 @@
     <title>Monthly Challenge - {{month}}</title>
 </head>
 <body>
-    <h1> {{month}} Challenge</h1>
-    <h2> {{text}}</h2>
+    <h1> {{month|title}} Challenge</h1>
+    {% if text is None %}
+     <h2>"No Challenge this month, tis the season to endulge"</h2>
+    {% else %}
+     <p>{{text}}</p>
+    {% endif %}
+    
 </body>
 </html>
