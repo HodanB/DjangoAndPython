@@ -1,9 +1,15 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block page_title %} Monthly Challenges {% endblock  %}</title>
+    {% block css_files %} 
+    <link rel="stylesheet" href="{% static 'challenges/styles.css' %}">
+    {%endblock%}
+    
 </head>
 <body>
    {% block content %} {% endblock %}

@@ -1,14 +1,15 @@
 {% extends "base.html" %}
 
-    {% block page_title %}
-    Monthly Diet Challenges:
-    {% endblock %}
 
-    {% block content %}
+{% block page_title %}
+    Monthly Diet Challenges:
+{% endblock %}
+
+{% block content %}
     <h1>Monthly Diet Challenges:</h1>
     <ul>
         {%for month in list_months%}
              <li><a href="{{ month.url }}">{{month.name|title}}</a></li>
         {% endfor %}
     </ul>
-    {% endblock %}
+{% endblock %}
